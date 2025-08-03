@@ -1,10 +1,18 @@
-class Person:
-  def __init__(mysillyobject, name, age):
-    mysillyobject.name = name
-    mysillyobject.age = age
+from typing import Any
 
-  def myfunc(abc):
-    print("Hello my name is " + abc.name)
+
+class Person:
+    """Self parameter variations"""
+
+    def __init__(mysillyobject: "Person", name: Any, age: Any) -> None:
+        """(class) Person: "Person" is self parameter variations"""
+        mysillyobject.name: Any = name
+        mysillyobject.age: Any = age
+
+    def myfunc(abc: "Person") -> None:
+        """(class) Person: "Person" is self parameter variations"""
+        print("Hello my name is " + abc.name)
+
 
 p1 = Person("John", 36)
 p1.myfunc()
