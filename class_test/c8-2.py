@@ -5,7 +5,7 @@ class Parent:  # define parent class
     parentAttr = 100
 
     def __init__(self):
-        self.name = "Parent"
+        self.pname = "Parent"
         print("Calling parent constructor")
 
     def parentMethod(self):
@@ -18,21 +18,22 @@ class Parent:  # define parent class
         print("Parent attribute :", Parent.parentAttr)
 
     def displayParentEmployee(self):
-        print("displayParentEmployee, Name : ", self.name)
+        print("displayParentEmployee, Name : ", self.pname)
 
 
 class Child(Parent):  # define child class
     """define child class"""
 
     def __init__(self):
-        self.name = "Child"
+        super().__init__()  # Call parent constructor first
+        self.cname = "Child"
         print("Calling child constructor")
 
     def childMethod(self):
         print("Calling child method")
 
     def displayChildEmployee(self):
-        print("displayChildEmployee, Name : ", self.name)
+        print("displayChildEmployee, Name : ", self.cname)
 
 
 c = Child()  # instance of child
@@ -46,8 +47,8 @@ c.setAttr(200)  # again call parent's method
 c.getAttr()  # again call parent's method
 c.displayChildEmployee()
 
-# This will not throw AttributeError: Child instance has no attribute 'name',
-# because both parent and child classes uses the same name parameter
+# When Parent constructor__init__() is not initialized inside Child's constructor__init__().
+# Then displayParentEmployee throw > AttributeError: Child instance has no attribute 'name'
 c.displayParentEmployee()
 
 p = Parent()

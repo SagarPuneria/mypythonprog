@@ -1,9 +1,8 @@
-#!/usr/bin/python
+#!/usr/bin/env python3
 
 
-class Employee:
-    """Class attributes and built-in functions.
-    Common base class for all employees"""
+class Employee:  # Common base class for all employees
+    """Class attributes and built-in functions."""
 
     empCount = 0
 
@@ -11,16 +10,17 @@ class Employee:
         self.name = name
         self.salary = salary
         Employee.empCount += 1
+        print(f"__init__() => total Employee: {Employee.empCount}")
 
     def displayCount(self):
-        print(f"Total Employee: {Employee.empCount}")
+        print(f"displayCount() -> Total Employee: {Employee.empCount}")
         # print("Total Employee %d" % Employee.empCount)
 
     def displayAge(self):
         if hasattr(self, "age"):
-            print("Employee Age:", self.age)
+            print(f"displayAge() -> Employee Age: {self.age}")
         else:
-            print("Employee Age: Not set")
+            print("displayAge() -> Employee Age: Not set")
 
     def displayEmployee(self):
         # print("Name : ", self.name, ", Salary: ", self.salary)
