@@ -3,15 +3,15 @@ import sys, os
 
 # Module importing and path manipulation
 
-# support and support2 are custom modules
+# support and Support2 are custom modules
 # support is a nested module structure
-# support2 is a simple module with function
+# Support2 is a simple module with function
 
 # import support # ModuleNotFoundError: No module named 'support'
-import support2
+import Support2
 
 # Now you can call defined function that module as follows
-support2.print_func("Zara 2")
+Support2.print_func("Zara 2")
 
 print("======================")
 print("1 sys.path:", sys.path)

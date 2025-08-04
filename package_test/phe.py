@@ -1,6 +1,6 @@
 # Now import your Phone Package.
 import Phone
 
-Phone.pots()
-Phone.isdn()
+Phone.potss()
+Phone.isdnn()
 Phone.g33()

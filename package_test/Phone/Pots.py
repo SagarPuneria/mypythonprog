@@ -1,4 +1,5 @@
-#!/usr/bin/python
+#!/usr/bin/env python3
 
-def pots():
-   print "I'm Pots Phone"
+
+def potss():
+    print("I'm Pots Phone")
