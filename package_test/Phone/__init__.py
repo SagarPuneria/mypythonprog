@@ -6,6 +6,7 @@ from .Pots import potss
 * potss - The specific object/function/class being imported from the Pots module
 """
 
+# Package initialization
 from .Pots import potss
 from .Isdn import isdnn
 from .G3 import g33
