@@ -1,4 +1,4 @@
-#!/usr/bin/python
-def print_func( par ):
-   print "Hello = ", par
-   return
+#!/usr/bin/env python3
+def print_func(par: str) -> None:
+    print("Hello = ", par)
+    return
